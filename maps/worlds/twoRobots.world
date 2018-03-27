@@ -23,9 +23,9 @@ interval_sim 100  # simulation timestep in milliseconds
 window
 (
   size [ 800 700 ]
-  center [ 0.0 0.0 ]
-  rotate [ 0.0 0.0 ]
-  scale 60
+  center [ -13.507 11.239 ]
+  rotate [ 0.000 0.000 ]
+  scale 37.255
   show_grid 1
 )
 
@@ -33,10 +33,10 @@ floorplan
 ( 
   name "FGH"
   # size [54 54 1]
-  size [54.000 35.5.000 1.000]      # always square in GUI??
+  size [54.000 35.500 1.000]      # always square in GUI??
   ### pose [0.000 0.000 0.000   1.570]
   #pose [0.000 0.000 0.000   0.000]
-  pose [  -4.1  2.85 0.0   0.0 ]
+  pose [  -4.100  2.850 0.000   0.000 ]
   #####  bitmap "FGH.pgm"
   # bitmap "../cost_map.pgm"
   bitmap "../cost_map_fields_of_view_3.pgm"     #  and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/maps/cost_map.yaml
@@ -55,7 +55,7 @@ floorplan
 # throw in a robot
 turtlebot
 (
-  pose [ -15.0  17.0   0.0   0.0 ]    # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/launch/robots_in_stage.launch
+  pose [ -10.622  4.326   0.000   -20.934 ]    # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/launch/robots_in_stage.launch
   #pose [ -10.0  4.5   0.0   0.0 ]
   name "turtlebot"
   color "black"
@@ -63,7 +63,7 @@ turtlebot
 
 turtlebot
 (
-  pose [ -6.0  4.2   0.0   0.0 ]        # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/launch/robots_in_stage.launch
+  pose [ -10.282  4.761   0.000   111.131 ]        # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/launch/robots_in_stage.launch
   #pose [ -1.0  -8.0   0.0   0.0 ]
   #pose [ -1.0  4.0   0.0   0.0 ]
   name "turtlebot2"

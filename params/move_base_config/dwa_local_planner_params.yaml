@@ -42,7 +42,8 @@ DWAPlannerROS:
   # xy_goal_tolerance: 0.2
   # yaw_goal_tolerance: 0.17
   xy_goal_tolerance: 0.5
-  yaw_goal_tolerance: 0.5
+  #yaw_goal_tolerance: 0.5
+  yaw_goal_tolerance: 0.17
 
   rot_stopped_vel: 0.01
   trans_stopped_vel: 0.01
