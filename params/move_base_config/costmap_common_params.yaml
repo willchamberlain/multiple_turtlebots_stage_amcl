@@ -19,8 +19,13 @@ max_obstacle_height: 2.0
 raytrace_range: 3.0
 
 #The footprint of the robot and associated padding
-footprint: [[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]
+#footprint: [[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]
+footprint: [[-0.225, -0.225], [-0.225, 0.225], [0.225, 0.225], [0.46, 0.0], [0.225, -0.225]]
 footprint_padding: 0.01
+
+#plugins:
+  #- {name: static_map,       type: "costmap_2d::StaticLayer"  map_topic:"/extra_static"}
+  #- {name: obstacles,        type: "costmap_2d::VoxelLayer"}
 
 #Cost function parameters
 inflation_radius: 0.55

@@ -1,4 +1,5 @@
-include "/opt/ros/indigo/share/turtlebot_stage/maps/stage/turtlebot.inc"
+#include "/opt/ros/indigo/share/turtlebot_stage/maps/stage/turtlebot.inc"
+include "/mnt/nixbig/build_workspaces/p2os_purdue_ws/src/p2os/p2os_launch/launch/stage-worlds/turtlebot_hokuyo.inc"
 
 define floorplan model
 (
@@ -29,33 +30,45 @@ window
 )
 
 floorplan
-(
-  name "my_map"
-  bitmap "../twoRooms.pgm"
-  size [ 37.0 35.3 2.0 ]
- # pose [  0  0 0.0 0.0 ]
- #location of the center of map
-   pose [  6.3  -5.75 0.0 0.0 ]
+( 
+  name "FGH"
+  # size [54 54 1]
+  size [54.000 35.5.000 1.000]      # always square in GUI??
+  ### pose [0.000 0.000 0.000   1.570]
+  #pose [0.000 0.000 0.000   0.000]
+  pose [  -4.1  2.85 0.0   0.0 ]
+  #####  bitmap "FGH.pgm"
+  # bitmap "../cost_map.pgm"
+  bitmap "../cost_map_fields_of_view_3.pgm"     #  and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/maps/cost_map.yaml
 )
+#floorplan
+#(
+#  name "my_map"
+#  bitmap "../twoRooms.pgm"
+#  size [ 37.0 35.3 2.0 ]
+# # pose [  0  0 0.0   0.0 ]
+# #location of the center of map
+#   pose [  6.3  -5.75 0.0 0.0 ]
+#)
+# load an environment bitmap
 
 # throw in a robot
 turtlebot
 (
-  pose [ 0.0 0.0 0.0 0.0 ]
+  pose [ -15.0  17.0   0.0   0.0 ]    # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/launch/robots_in_stage.launch
+  #pose [ -10.0  4.5   0.0   0.0 ]
   name "turtlebot"
   color "black"
 )
 
 turtlebot
 (
-  pose [ 1.0 1.0 0.0 0.0 ]
+  pose [ -6.0  4.2   0.0   0.0 ]        # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/launch/robots_in_stage.launch
+  #pose [ -1.0  -8.0   0.0   0.0 ]
+  #pose [ -1.0  4.0   0.0   0.0 ]
   name "turtlebot2"
   color "green"
 )
-
-
-
-
 
 
 

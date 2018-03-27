@@ -1,0 +1,7 @@
+image: cost_map_fields_of_view_3.pgm      # and in /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/maps/worlds/twoRobots.world
+resolution: 0.050000
+origin: [-100.000000, -100.000000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

@@ -1,6 +1,8 @@
 <launch>
 <arg name="world_file" default="$(find multiple_robots_stage)/maps/worlds/twoRobots.world" />
-	<arg name="map_file" default="$(find multiple_robots_stage)/maps/twoRooms.yaml" />
+  <!-- <arg name="map_file" default="$(find multiple_robots_stage)/maps/twoRooms.yaml" /> -->
+  <arg name="map_file" default="$(find multiple_robots_stage)/maps/cost_map.yaml" />
+  <!-- <arg name="map_file" default="/mnt/nixbig/data/project_AA1_backup_pioneer2/2018_01_06_0012_vrep/2018_01_06_0012_vrep/pioneer2/maps/lvl11_map2/cost_map.yaml" /> -->
 	<arg name="waypoints" default='0' />
 	<arg name="robotName1" default="robot_0" />
 	<arg name="robotName2" default="robot_1" />
@@ -21,9 +23,12 @@
     <include file="$(find multiple_robots_stage)/launch/client_robot.launch"/>
     <include file="$(find multiple_robots_stage)/launch/includes/single_robot.launch">
     	<arg name="namespace" value="$(arg robotName1)"/>
-    	<arg name="initial_pose_x" value="0.0"/>
-    	<arg name="initial_pose_y" value="0.0"/>
-    	<arg name="initial_pose_a" value="0.0"/>
+      <!-- match to /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/maps/worlds/twoRobots.world -->
+    	<!-- <arg name="initial_pose_x" value="-10.0"/>    
+    	<arg name="initial_pose_y" value="4.5"/> -->
+      <arg name="initial_pose_x" value="-15.0"/>    
+      <arg name="initial_pose_y" value="17.0"/>
+    	<arg name="initial_pose_a" value="00.0"/>
     </include>
   </group>
   <!-- END ROBOT 0 -->
@@ -35,8 +40,13 @@
     <include file="$(find multiple_robots_stage)/launch/client_robot.launch"/>
     <include file="$(find multiple_robots_stage)/launch/includes/single_robot.launch">
     	<arg name="namespace" value="$(arg robotName2)"/>
-    	<arg name="initial_pose_x" value="1.0"/>
-    	<arg name="initial_pose_y" value="1.0"/>
+      <!-- match to /mnt/nixbig/build_workspaces/multiple_turtlebots_stage_amcl_gergia_ws/src/multiple_turtlebots_stage_amcl/maps/worlds/twoRobots.world -->
+      <!-- <arg name="initial_pose_x" value="-1.0"/>    
+      <arg name="initial_pose_y" value="4.0"/> 
+      <arg name="initial_pose_x" value="-1.0"/>    
+      <arg name="initial_pose_y" value="-8.0"/> -->
+      <arg name="initial_pose_x" value="-6.0"/>    
+      <arg name="initial_pose_y" value="4.2"/>
     	<arg name="initial_pose_a" value="0.0"/>
     </include>
   </group>
